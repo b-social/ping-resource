@@ -1,4 +1,4 @@
-(defproject b-social/ping-resource "0.0.0"
+(defproject b-social/ping-resource "0.0.1"
   :description "FIXME: write description"
   :url "https://github.com/B-Social/ping-resource"
   :license {:name "Eclipse Public License"
