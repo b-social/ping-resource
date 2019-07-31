@@ -1,8 +1,8 @@
 (defproject b-social/ping-resource "0.0.1"
   :description "FIXME: write description"
   :url "https://github.com/B-Social/ping-resource"
-  :license {:name "Eclipse Public License"
-            :url  "http://www.eclipse.org/legal/epl-v10.html"}
+  :license {:name "The MIT License"
+            :url  "https://opensource.org/licenses/MIT"}
   :dependencies [[cheshire "5.8.1"]
                  [liberator "0.15.2"]
                  [halboy "4.0.1"]
@@ -22,7 +22,8 @@
              :test   [:shared]}
   :eftest {:multithread? false}
   :repl-options {:init-ns ping-resource.core}
-  :deploy-repositories [["releases" :clojars]]
+  :deploy-repositories {"releases" {:url   "https://repo.clojars.org"
+                                    :creds :gpg}}
   :aliases {"update-readme-version" ["shell" "sed" "-i" "s/\\\\[b-social\\\\/ping-resource \"[0-9.]*\"\\\\]/[b-social\\\\/ping-resource \"${:version}\"]/" "README.md"]
             "test"                  ["eftest" ":all"]}
   :release-tasks [["shell" "git" "diff" "--exit-code"]
